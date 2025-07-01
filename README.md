@@ -1,4 +1,4 @@
-# 🐱 OFFICIAL CAT FAX (UNVERIFIED)  
+# 🐱 OFFICIAL CAT FAX (FAKE)  
 
 *A 100% legitimate repository for critical feline misinformation.*  
 
