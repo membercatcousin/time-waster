@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CAT FACTS (BUT WORSE)</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background: white;
+            text-align: center;
+            color: black;
+            margin: 50px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #fact {
+            font-size: 18px;
+            margin: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background: white;
+            color: black;
+            font-size: 16px;
+            padding: 8px 15px;
+            margin: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        #counter {
+            font-size: 12px;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <h1>🐱 OFFICIAL CAT FACTS (UNVERIFIED) 🐱</h1>
+    <hr>
+    <div id="fact">Click the button for a cat fact. Or don't. The cat doesn't care.</div>
+    
+    <button onclick="newFact()">Generate Cat Fact</button>
+    <button onclick="alert('Error 418: This is a teapot, not a cat.')">Free Cat</button>
+    
+    <div id="counter">Seconds wasted here: <span id="time">0</span></div>
+    
+    <script>
+        const facts = [
+            "Cats are legally allowed to judge you in 12 countries.",
+            "Cats are absolutley adorable.",
+            "A cat's purr frequency can cure existential dread (citation needed).",
+            "Cats invented the concept of 'Monday.'",
+            "If you stare at a cat long enough, it becomes a philosophical debate.",
+            "All orange cats share one brain cell. It is currently on loan.",
+            "Cats can teleport, but only to the exact center of your keyboard.",
+            "The 'M' on a tabby's forehead stands for 'Mischief.'",
+            "Cats dream of overthrowing humanity. It's a cute dream."
+        ];
+        
+        function newFact() {
+            document.getElementById("fact").innerHTML = facts[Math.floor(Math.random() * facts.length)];
+        }
+        
+        // Time-waster counter
+        let seconds = 0;
+        setInterval(() => {
+            seconds++;
+            document.getElementById("time").innerHTML = seconds;
+        }, 1000);
+        
+        // Easter egg
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.key === 'c') {
+                alert("Copying cats is prohibited by feline law.");
+            }
+        });
+    </script>
+</body>
+</html>
